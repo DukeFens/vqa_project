@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "vqa_project"
+version = "0.0.1"
+description = "This project is for MediaEval Challenge 2025"
+authors = [
+  { name = "Duke" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.12.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["vqa_project"]
+include = ["pyproject.toml", "vqa_project/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["vqa_project"]
+force-sort-within-sections = true
+
